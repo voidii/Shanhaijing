@@ -12,6 +12,9 @@ TagManager:
   - Scene
   - Hook
   - main
+  - ChiYou_attack
+  - Player_extreme_doge_detect
+  - ChiYou
   layers:
   - Default
   - TransparentFX
@@ -29,7 +32,7 @@ TagManager:
   - Portal
   - Mob
   - caonima
-  - 
+  - attack
   - 
   - 
   - 

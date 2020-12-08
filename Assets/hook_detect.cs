@@ -55,7 +55,7 @@ public class hook_detect : MonoBehaviour
 
     IEnumerator Move_player()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.5f);
         player = GameObject.FindWithTag("Player");
 
         if(Vector2.Distance(hook.transform.position, player.transform.position) < 5.5)
