@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2877778609973258144}
   - component: {fileID: 2877778609973258145}
   - component: {fileID: 3681850491563769987}
+  - component: {fileID: 7789782536466002658}
+  - component: {fileID: 2161416131161069080}
   m_Layer: 8
   m_Name: 1276290_5-0
   m_TagString: ChiYou_attack
@@ -118,6 +120,41 @@ CapsuleCollider2D:
   m_Offset: {x: -0.018469846, y: -0.0073870537}
   m_Size: {x: 1.7300761, y: 0.5997139}
   m_Direction: 1
+--- !u!114 &7789782536466002658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877778609973258147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac37907b0e473f44832534359345f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageText: {fileID: 2356072319142040904, guid: 4702e8796f2c1824089edb19e8798896,
+    type: 3}
+--- !u!50 &2161416131161069080
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877778609973258147}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2877778611618500679
 GameObject:
   m_ObjectHideFlags: 0

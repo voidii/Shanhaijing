@@ -10,21 +10,29 @@ public class ChiYou_attack : MonoBehaviour
     private float attack_cd = 0f;
     bool in_an = false;
     private Animator animator;
+    GameObject game_control;
+    dialog_state st;
     void Start()
     {
         animator = transform.Find("attack_g").GetComponent<Animator>();
+        game_control = GameObject.Find("Dialog_start");
+        st = game_control.GetComponent<dialog_state>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        attack_cd += Time.deltaTime;
-        if(attack_cd > attack_frequecny){
-            StartCoroutine(ShanBi_SUccess());
-            
-            attack_cd = 0;
+        if(st.game_state != 1){
+            return;
         }
-        
+        else{
+            attack_cd += Time.deltaTime;
+            if(attack_cd > attack_frequecny){
+                StartCoroutine(ShanBi_SUccess());
+
+                attack_cd = 0;
+            }
+        }
     }
 
     IEnumerator ShanBi_SUccess(){

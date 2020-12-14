@@ -23,8 +23,7 @@ public class hook_detect : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButton(1)){
-            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            Debug.Log(hit.collider.tag);
+            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Hook"));
             if(hit.collider.gameObject.tag == "Hook"){
                 hook = hit.collider.gameObject;
                 StartCoroutine(Move_player());
@@ -32,26 +31,6 @@ public class hook_detect : MonoBehaviour
         }
         
     }
-
-    //IEnumerator OnMouseOver()
-    //{
-    //    // Destroy the gameObject after clicking on it
-    //    if(Input.GetMouseButton(1)){
-    //        
-    //        player = GameObject.FindWithTag("Player");
-    //        yield return new WaitForSeconds(0.4f);
-    //        Move_player();
-    //    }
-//
-    //    //if(in_cd){
-    //    //    cd_time += Time.deltaTime;
-    //    //    if(cd_time > 10f){
-    //    //        in_cd = false;
-    //    //        cd_time = 0f;
-    //    //    }
-    //    //}
-    //    
-    //}
 
     IEnumerator Move_player()
     {
@@ -62,8 +41,6 @@ public class hook_detect : MonoBehaviour
         {
             
             player.transform.position = hook.transform.position + new Vector3(0, 2f, 0);
-            //player.transform.position = Vector2.MoveTowards(player.transform.position, transform.position, 5f);
-            //in_cd = true;
         }
     }
 }

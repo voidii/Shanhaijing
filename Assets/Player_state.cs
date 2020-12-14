@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_state : MonoBehaviour
 {
     // Start is called before the first frame update
     public int state = 0;//0是正常，1是加强
     public float buff_time = 10f;
+    public float health = 100f;
+    public Slider healthbar;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthbar.value = health / 100f;
         if(state == 1){
             buff_time -= Time.deltaTime;
         }
@@ -28,5 +32,11 @@ public class Player_state : MonoBehaviour
     }
     public int get_state(){
         return state;
+    }
+    public void arrow_attack(){
+        health -= 3f;
+    }
+    public void powerful_attack(){
+        health -= 6f;
     }
 }

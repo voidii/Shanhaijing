@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8320342136520753506}
   - component: {fileID: 7427095010518784970}
   m_Layer: 0
-  m_Name: DamageText
+  m_Name: 99999
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 50
 --- !u!222 &4652609299839685390
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -186,4 +187,4 @@ MonoBehaviour:
   m_renderer: {fileID: 3658272760331396745}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 2
+  _SortingOrder: 50

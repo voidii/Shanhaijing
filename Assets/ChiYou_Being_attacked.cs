@@ -9,9 +9,10 @@ public class ChiYou_Being_attacked : MonoBehaviour
     GameObject player;
     private Animator animator;
     RaycastHit2D hit;
+    GameObject ChiYou;
     void Start()
     {
-
+        ChiYou = GameObject.Find("ChiYou");  
     }
 
     // Update is called once per frame
@@ -21,12 +22,13 @@ public class ChiYou_Being_attacked : MonoBehaviour
 
         //player_state = player.GetComponent<Player_state>().state;
         
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButtonDown(0)){
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             player = GameObject.Find("Knight(Clone)");
             animator = GetComponent<Animator>();
-            Debug.Log(player.name);
             player_state = player.GetComponent<Player_state>().get_state();
+            ChiYou_health health_script = ChiYou.GetComponent<ChiYou_health>();
+            health_script.powerful_attack();
             being_attacked();
         }
         
@@ -38,6 +40,7 @@ public class ChiYou_Being_attacked : MonoBehaviour
             //set animator
             animator.SetTrigger("attack");
             transform.GetComponent<damage_text>().create_damage_text();
+            
         }
     }
 }

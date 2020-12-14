@@ -16,7 +16,7 @@ public class Damage_POP : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Setup(int damage){
+    public void Set(int damage){
         textMesh.SetText(damage.ToString());
     }
 

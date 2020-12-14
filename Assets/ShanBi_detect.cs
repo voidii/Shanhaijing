@@ -20,9 +20,8 @@ public class ShanBi_detect : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("in collision: " + other.tag);
-        if(Input.GetMouseButton(1) && !in_an && other.tag == "ChiYou_attack"){
-            Debug.Log("duobile: " + other.tag);
+        if(Input.GetMouseButton(1) && other.tag == "ChiYou_attack"){
+            //Debug.Log("duobile: " + other.tag);
             StartCoroutine(ShanBi_SUccess());
         }
     }
@@ -30,7 +29,7 @@ public class ShanBi_detect : MonoBehaviour
         in_an = true;
         animator.SetTrigger("DuoBi");
         player.GetComponent<Player_state>().set_state(1);
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length / 2);
+        yield return new WaitForSeconds(0.1f);
         //m_SpriteRenderer.enabled = false;
         in_an = false;
     }

@@ -13,8 +13,9 @@ TagManager:
   - Hook
   - main
   - ChiYou_attack
-  - Player_extreme_doge_detect
   - ChiYou
+  - Catch_sword
+  - Player_extreme_doge_detect
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Mob
   - caonima
   - attack
-  - 
+  - Hook
   - 
   - 
   - 
