@@ -1,4 +1,4 @@
-alpha verison: https://drive.google.com/drive/folders/1hglx5iGNWejVdI-LtiPY-e6Gn6gN0aS8?usp=sharing
+beta verison: https://drive.google.com/drive/folders/1UXvYeBmeTL-WDTfZCwpHoPT84ppj2wxr?usp=sharing
 
 github: https://github.com/voidii/Shanhaijing/tree/master
 
@@ -6,6 +6,6 @@ Name: ShanHaiJing
 
 My name: Frank Zhang
 
-OK I better explain how this game works so far. So the red stone in the air is the object you can pull yourself to. The big panda, ChiYou, the boss, will attack you every 10 sec. You can use your right clikc to move to the stone to avoid the attack. You have to wait till the arrow is close enough to you and then click to dodage so you can get a buff. You will see an animation around you. Afte that you can left click on the boss to attack him. So far this is your only way to do damage to the boss. There is no health bar for u and for boss now I haven't had time to make that. The purpose of this version is to give a rough view of the game itself. So far we have everything we need of the battle system except for the common elements like menu, skills bar, health and magic bar. I really wanna finish the battle system first before I finish these elements. I hope that is ok. 
+Known bugs: The stones work fine now, yeah, only took me two days. FOr now, the dialog could mess up if player presses F too quick. The dodge system is werid, sometimes it works sometimes it doesn't. It doesn't have a exit option or winning scene yet.
 
-Known bugs: the stone might go non-responing. I have no idea why. When the number of it remains one, it will be more stable. If there are more than one, it is totally up to god which one or ones will work as they are supposed to. I mean it. You can downloiad it and duplicate the stone in the sence and you will see. Everytime you re-open the project in Unity, the stones that are working will change. Some will keep working, some will stop working and some will start working. I have no idea why. It is totally up to god. 
+I just want to say that I am doing the best I can here and I just need a little more time to polish this game. Please forgive me. I will resubmitted a version before 8 a.m. tomorrow morning. I just need a little more time. 

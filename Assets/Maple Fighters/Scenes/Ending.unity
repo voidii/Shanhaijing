@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124, y: -0.000014305}
-  m_SizeDelta: {x: 1560.6003, y: 930.996}
+  m_AnchoredPosition: {x: 5.1, y: -61.2}
+  m_SizeDelta: {x: 1418.742, y: 1053.3104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257378879
 MonoBehaviour:
@@ -171,13 +171,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.34901962}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cdbd30cdb5c224142ba028cf0fc58cd6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c06f67d17bb7016488caaf0823bf6eb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -386,13 +386,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 380167001}
-  textFile: {fileID: 4900000, guid: fd05ed74f53c97b48989b5532323304c, type: 3}
+  textFile: {fileID: 4900000, guid: 8484196e01a1f154c88eaef944f693d1, type: 3}
   index: 0
   faceImage: {fileID: 257378879}
-  PanGu: {fileID: 21300000, guid: c63d7ef87b6965840a4ff2de1d3da987, type: 3}
-  NvWa: {fileID: 21300000, guid: 5f1cc13c5128c7f4b8e939bc6173d05d, type: 3}
-  XuanYuan_ShenNong: {fileID: 21300000, guid: 5583af3dbfd718f44be9ad16ee66d28e, type: 3}
-  ChiYou: {fileID: 21300000, guid: cdbd30cdb5c224142ba028cf0fc58cd6, type: 3}
+  PanGu: {fileID: 21300000, guid: c06f67d17bb7016488caaf0823bf6eb7, type: 3}
+  NvWa: {fileID: 21300000, guid: 57ae6612b72a778408f157c86d110f19, type: 3}
+  XuanYuan_ShenNong: {fileID: 21300000, guid: f0b27a86546c1884eb980e74f9ff830d, type: 3}
+  ChiYou: {fileID: 21300000, guid: c11d4a53662016640a97e03ba616cfdd, type: 3}
 --- !u!1 &598293023
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -869,5 +869,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 2011897740}
-  textFile: {fileID: 4900000, guid: 5d778b50bd1aaa542908fa68de8c2c04, type: 3}
+  textFile: {fileID: 4900000, guid: 44085989f4435754fa08618216658e09, type: 3}
   index: 0

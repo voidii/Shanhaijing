@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class english_op : MonoBehaviour
 {
@@ -32,9 +33,16 @@ public class english_op : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(index == textList.Count + 1){
+        if(index == textList.Count){
             gameObject.SetActive(false);
             index = 0;
+            if(SceneManager.GetActiveScene().buildIndex == 0){
+                SceneManager.LoadScene(1);
+            }
+            else{
+                Application.Quit();
+            }
+            
             return;
         }
         if(Input.GetKeyDown(KeyCode.F) && !in_dia){
@@ -55,6 +63,7 @@ public class english_op : MonoBehaviour
     }
     IEnumerator SetText(){
         faceImage.sprite = picList[index];
+        //faceImage.SetNativeSize();
         for(int i = 0; i < textList[index].Length; i++){
             textLabel.text += textList[index][i];
             yield return new WaitForSeconds(0.03f);

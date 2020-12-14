@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_state : MonoBehaviour
 {
@@ -19,12 +20,19 @@ public class Player_state : MonoBehaviour
     void Update()
     {
         healthbar.value = health / 100f;
+        if(health < 0f){
+            SceneManager.LoadScene(3);
+        }
         if(state == 1){
             buff_time -= Time.deltaTime;
         }
         if(state == 1 && buff_time < 0){
             state = 0;
             buff_time = 10f;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(3);
         }
     }
     public void set_state(int i){

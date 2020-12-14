@@ -27,8 +27,6 @@ public class ChiYou_Being_attacked : MonoBehaviour
             player = GameObject.Find("Knight(Clone)");
             animator = GetComponent<Animator>();
             player_state = player.GetComponent<Player_state>().get_state();
-            ChiYou_health health_script = ChiYou.GetComponent<ChiYou_health>();
-            health_script.powerful_attack();
             being_attacked();
         }
         
@@ -36,11 +34,10 @@ public class ChiYou_Being_attacked : MonoBehaviour
 
     void being_attacked(){
         if(player_state == 1 && hit.collider.tag == "ChiYou"){
-
-            //set animator
             animator.SetTrigger("attack");
             transform.GetComponent<damage_text>().create_damage_text();
-            
+            ChiYou_health health_script = ChiYou.GetComponent<ChiYou_health>();
+            health_script.powerful_attack();
         }
     }
 }

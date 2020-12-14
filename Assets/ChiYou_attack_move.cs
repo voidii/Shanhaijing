@@ -8,6 +8,7 @@ public class ChiYou_attack_move : MonoBehaviour
     GameObject player;
     private float speed = 10.0f;
     private Vector3 normalizeDirection;
+    float life = 0f;
 
     void Start()
     {
@@ -22,5 +23,9 @@ public class ChiYou_attack_move : MonoBehaviour
     void Update()
     {
         transform.position += normalizeDirection * speed * Time.deltaTime;
+        life += Time.deltaTime;
+        if(life > 5f){
+            Destroy(gameObject);
+        }
     }
 }

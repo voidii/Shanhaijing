@@ -59,8 +59,6 @@ public class swords_attack : MonoBehaviour
                 rb.drag = 1;
                 transform.parent = GameObject.Find("LocalPlayer").transform;
                 return;
-                //float angle = Mathf.Atan2(normalizeDirection.y, normalizeDirection.x) * Mathf.Rad2Deg;
-                //transform.rotation =  Quaternion.AngleAxis(angle, Vector3.left);
             }
             if (_state == State.Attacking) {
                 //time_count += Time.deltaTime;
@@ -70,8 +68,6 @@ public class swords_attack : MonoBehaviour
             if (_state == State.Returning) {
                 time_count += Time.deltaTime;
                 rb.AddForce((Returing_object.transform.position - ChiYou.transform.position).normalized * 10f);
-                //Debug.Log((FindRandomTarget().transform.position - ChiYou.transform.position).normalized);
-                //transform.position += normalizeDirection * 20f * Time.deltaTime;
             }
             if(time_count > 5f){
                 rb.velocity = Vector2.zero;
@@ -100,10 +96,10 @@ public class swords_attack : MonoBehaviour
 
         if((other.transform.tag == "Catch_sword" && _state == State.Returning)){
             rb.velocity = Vector2.zero;
+            transform.parent = GameObject.Find("Knight(Clone)").transform;
             transform.position = GameObject.Find("sword_location").transform.position;
             _state = State.Initial;
             time_count = 0f;
-            transform.parent = GameObject.Find("Knight(Clone)").transform;
             Destroy (rb);
         }
     }
