@@ -16,6 +16,9 @@ public class english_op : MonoBehaviour
     public Sprite NvWa;
     public Sprite XuanYuan_ShenNong;
     public Sprite ChiYou;
+    public GameObject last_word;
+
+    bool show_all = false;
     List<string> textList = new List<string>();
     List<Sprite> picList = new List<Sprite>();
     void Start()
@@ -33,23 +36,29 @@ public class english_op : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(index == textList.Count){
+        if(index == textList.Count && Input.GetKeyDown(KeyCode.F)){
             gameObject.SetActive(false);
             index = 0;
             if(SceneManager.GetActiveScene().buildIndex == 0){
                 SceneManager.LoadScene(1);
             }
             else{
-                Application.Quit();
+                last_word.SetActive(true);
+                gameObject.SetActive(false);
             }
             
             return;
         }
-        if(Input.GetKeyDown(KeyCode.F) && !in_dia){
+        else if(Input.GetKeyDown(KeyCode.F) && !in_dia && index != textList.Count){
             textLabel.text = "";
             in_dia = true;
             StartCoroutine(SetText());
         }
+
+        if(Input.GetKeyDown(KeyCode.T) && in_dia){
+            show_all = true;
+        }
+        
     }
     void GetTextFromFile(TextAsset file){
         textList.Clear();
@@ -65,11 +74,19 @@ public class english_op : MonoBehaviour
         faceImage.sprite = picList[index];
         //faceImage.SetNativeSize();
         for(int i = 0; i < textList[index].Length; i++){
+            if(show_all){
+                show_all = false;
+                textLabel.text = textList[index];
+                break;
+            }
             textLabel.text += textList[index][i];
-            yield return new WaitForSeconds(0.03f);
+            
+            yield return new WaitForSeconds(0.01f);
         }
         index++;
         
         in_dia = false;
     }
+
+
 }

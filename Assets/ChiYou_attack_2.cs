@@ -18,7 +18,7 @@ public class ChiYou_attack_2 : MonoBehaviour
         player = GameObject.Find("LocalPlayer");
         att = GetComponent<Animator>();
         GetComponent<BoxCollider2D>().enabled = false;
-        cd = 0f;
+        cd = 7f;
         game_control = GameObject.Find("Dialog_start");
         st = game_control.GetComponent<dialog_state>();
         

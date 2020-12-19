@@ -9,10 +9,10 @@ public class ChiYou_Being_attacked : MonoBehaviour
     GameObject player;
     private Animator animator;
     RaycastHit2D hit;
-    GameObject ChiYou;
+    public GameObject ChiYou;
     void Start()
     {
-        ChiYou = GameObject.Find("ChiYou");  
+        //ChiYou = GameObject.Find("ChiYou");  
     }
 
     // Update is called once per frame
@@ -36,6 +36,7 @@ public class ChiYou_Being_attacked : MonoBehaviour
         if(player_state == 1 && hit.collider.tag == "ChiYou"){
             animator.SetTrigger("attack");
             transform.GetComponent<damage_text>().create_damage_text();
+            Debug.Log("being attacled");
             ChiYou_health health_script = ChiYou.GetComponent<ChiYou_health>();
             health_script.powerful_attack();
         }

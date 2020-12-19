@@ -62,7 +62,7 @@ public class swords_attack : MonoBehaviour
             }
             if (_state == State.Attacking) {
                 //time_count += Time.deltaTime;
-                rb.AddForce(normalizeDirection * 10f);
+                rb.AddForce(normalizeDirection * 50f);
                 //transform.position += normalizeDirection * 20f * Time.deltaTime;
             }
             if (_state == State.Returning) {

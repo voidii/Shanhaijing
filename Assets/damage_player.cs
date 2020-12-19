@@ -6,6 +6,7 @@ public class damage_player : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform damageText;
+    public bool if_already_caused_damage = false;
     void Start()
     {
         
@@ -17,8 +18,9 @@ public class damage_player : MonoBehaviour
         
     }
     void OnTriggerExit2D(Collider2D other){
-        if(other.transform.tag == "Player"){
+        if(other.transform.tag == "Player" && !if_already_caused_damage){
             Transform popup = Instantiate(damageText, transform.position, Quaternion.identity);
+            if_already_caused_damage = true;
             Damage_POP damage_pop = popup.GetComponent<Damage_POP>();
             GameObject player = GameObject.Find("Knight(Clone)");
             Player_state health_script = player.GetComponent<Player_state>();

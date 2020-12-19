@@ -21,6 +21,6 @@ public class damage_text : MonoBehaviour
     public void create_damage_text(){
         Transform popup = Instantiate(damageText, transform.position, Quaternion.identity);
         Damage_POP damage_pop = popup.GetComponent<Damage_POP>();
-        damage_pop.Set(1000);
+        //damage_pop.Set(1000);
     }
 }

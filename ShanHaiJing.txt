@@ -6,6 +6,10 @@ Name: ShanHaiJing
 
 My name: Frank Zhang
 
-Known bugs: The stones work fine now, yeah, only took me two days. FOr now, the dialog could mess up if player presses F too quick. The dodge system is werid, sometimes it works sometimes it doesn't. It doesn't have a exit option or winning scene yet.
+Known bugs: The stones work fine now, yeah, only took me two days. For now, the dialog could mess up if player presses F too quick so please wait till both texts are finished and then press F. The dodge system is werid, sometimes it works sometimes it doesn't. The sword could be in wrong direction if you move around too much will it is not with you. 
 
 I just want to say that I am doing the best I can here and I just need a little more time to polish this game. Please forgive me. I will resubmitted a version before 8 a.m. tomorrow morning. I just need a little more time. 
+
+/////////////12/13/2020 9:45 PM////////////////////////
+
+OK I made it with less bugs and add some sound effects. There is still a lot to improve tbh but I hope you enjoy the game. 
